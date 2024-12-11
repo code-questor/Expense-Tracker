@@ -1,0 +1,142 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background for contrast */
+    color: #333; /* Neutral text color */
+}
+
+h1, h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p {
+    text-align: center;
+    margin: 10px auto;
+    max-width: 800px;
+}
+
+/* Form Styling */
+.input-area {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.input-area label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-area input,
+.input-area select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#add-expense-btn {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add-expense-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Add spacing between table and surrounding content */
+.expense-display-section {
+    margin: 20px 0;
+}
+
+/* Add custom styles for the table */
+.expense-table {
+    width: 100%; /* Make the table full-width */
+    border-collapse: collapse; /* Remove double borders */
+    margin-bottom: 20px;
+}
+
+.expense-table th,
+.expense-table td {
+    padding: 10px; /* Add padding for readability */
+    border: 1px solid #ddd; /* Add light borders */
+    text-align: left; /* Align text to the left */
+}
+
+.expense-table th {
+    background-color: #f8f9fa; /* Light gray background for headers */
+    font-weight: bold; /* Bold text for headers */
+}
+
+.expense-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light background for alternate rows */
+}
+
+.expense-table tbody tr:hover {
+    background-color: #e9ecef; /* Highlight row on hover */
+    cursor: pointer; /* Add pointer cursor on hover */
+}
+
+/* Icon styles for Action column */
+.fa-trash-alt {
+    cursor: pointer; /* Pointer cursor for icons */
+    font-size: 16px; /* Adjust icon size */
+    color: #dc3545; /* Default red color for delete icon */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.fa-trash-alt:hover {
+    color: red; /* Change color on hover */
+}
+
+/* Total Expenses Styling */
+#total-expenses-container {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Adjust table padding and font size for small screens */
+    .expense-table th,
+    .expense-table td {
+        font-size: 14px; /* Reduce font size */
+        padding: 8px; /* Reduce padding */
+    }
+
+    /* Make the table scrollable horizontally */
+    .expense-table {
+        display: block;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent content wrapping */
+    }
+
+    /* Icons should be slightly smaller on mobile */
+    .fa-trash-alt {
+        font-size: 14px;
+    }
+
+    /* Adjust heading sizes */
+    h1, h2 {
+        font-size: 20px;
+    }
+
+    #add-expense-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
